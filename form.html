@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA - Formulario</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="calendar.html">Calendario</a></li>
+            <li><a href="form.html">Formulario</a></li>
+            <li><a href="about.html">Acerca de</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h1>Formulario con Select2</h1>
+        <form>
+            <label for="paises">Selecciona un país:</label>
+            <select id="paises" style="width: 300px;">
+                <option value="mx">México</option>
+                <option value="es">España</option>
+                <option value="ar">Argentina</option>
+                <option value="co">Colombia</option>
+                <option value="pe">Perú</option>
+            </select>
+        </form>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#paises').select2();
+        });
+    </script>
+    <script src="register.js"></script>
+</body>
+</html>

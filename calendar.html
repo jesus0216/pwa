@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA - Calendario</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="calendar.html">Calendario</a></li>
+            <li><a href="form.html">Formulario</a></li>
+            <li><a href="about.html">Acerca de</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h1>Calendario con FullCalendar</h1>
+        <div id="calendar"></div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const calendarEl = document.getElementById('calendar');
+            const calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                events: [
+                    {
+                        title: 'Evento de prueba',
+                        start: new Date()
+                    }
+                ]
+            });
+            calendar.render();
+        });
+    </script>
+    <script src="register.js"></script>
+</body>
+</html>
